@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'file:///E:/flutter_project/smiling_sniper_fc_app/lib/ui/home_screen.dart';
+import 'package:smiling_sniper_fc_app/ui/home_screen.dart';
 
 void main() {
   runApp(MaterialApp(home: SplashScreen()));
