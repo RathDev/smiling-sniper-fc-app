@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:smiling_sniper_fc_app/model/images/list_of_image.dart';
 
 class MyCarouselWithDot<T> extends StatefulWidget {
   // final List<T> images;
@@ -17,14 +18,7 @@ class MyCarouselWithDot<T> extends StatefulWidget {
 }
 
 class _MyCarouselWithDotState extends State<MyCarouselWithDot> {
-  List image = [
-    'assets/img/grass-stadium.jpg',
-    'assets/img/player-rath.jpg',
-    'assets/img/player-phemg.jpg',
-    'assets/img/player-ro.jpg',
-    'assets/img/player-bunthean.jpg',
-    'assets/img/player-jek.jpg',
-  ];
+
   int _current = 0;
 
   @override
@@ -32,10 +26,10 @@ class _MyCarouselWithDotState extends State<MyCarouselWithDot> {
     return Stack(
       children: [
         CarouselSlider.builder(
-          itemCount: image.length,
+          itemCount: ListOfImageData.length,
           options: CarouselOptions(
             height: widget.height,
-            aspectRatio: widget.aspectRatio,
+           // aspectRatio: widget.aspectRatio,
             viewportFraction: 1,
             enlargeCenterPage: true,
             autoPlay: true,
@@ -46,12 +40,12 @@ class _MyCarouselWithDotState extends State<MyCarouselWithDot> {
             },
           ),
           itemBuilder: (context, index) {
-            final item = image[index];
+            ListOfImage item = ListOfImageData[index];
 
             return ClipRRect(
               borderRadius: BorderRadius.circular(4),
               child: Image.asset(
-                item,
+                item.ImgUrl,
                 fit: BoxFit.fitWidth,
                 width: 1000,
               ),
@@ -63,8 +57,8 @@ class _MyCarouselWithDotState extends State<MyCarouselWithDot> {
           right: 12,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: image.map((img) {
-              int index = image.indexOf(img);
+            children: ListOfImageData.map((img) {
+              int index = ListOfImageData.indexOf(img);
 
               return Container(
                 width: 6.0,
