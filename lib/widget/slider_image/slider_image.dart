@@ -45,7 +45,7 @@ class _MyCarouselWithDotState extends State<MyCarouselWithDot> {
             return ClipRRect(
               borderRadius: BorderRadius.circular(4),
               child: Image.asset(
-                item.ImgUrl,
+                item.imgUrl,
                 fit: BoxFit.fitWidth,
                 width: 1000,
               ),

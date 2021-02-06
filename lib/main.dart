@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smiling_sniper_fc_app/ui/home_screen.dart';
+import 'file:///E:/workspace/smiling-sniper-fc-app/lib/ui/bottom_navigation_page/bottomnavigations.dart';
 
 void main() {
   runApp(MaterialApp(home: SplashScreen()));
@@ -19,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => HomeScreen(),
+          builder: (context) => Bottomnavigations(),
         ),
       );
     });

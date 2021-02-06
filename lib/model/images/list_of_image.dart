@@ -1,24 +1,49 @@
 class ListOfImage {
-  String ImgUrl;
+  String imgUrl;
+  String number;
+  String name;
 
-  ListOfImage({this.ImgUrl});
+  ListOfImage({this.imgUrl, this.name, this.number});
 }
 
 final ListOfImageData = [
   ListOfImage(
-    ImgUrl: 'assets/img/smiling_sniper_logo.jpg',
+    imgUrl: 'assets/img/player-rath.jpg',
+    name: 'AH BALE',
+    number: '11',
   ),
   ListOfImage(
-    ImgUrl: 'assets/img/player-rath.jpg',
+    imgUrl: 'assets/img/player-pheng.jpg',
+    name: 'Seang Pheng',
+    number: '12',
   ),
   ListOfImage(
-    ImgUrl: 'assets/img/player-phemg.jpg',
+    imgUrl: 'assets/img/player-ro.jpg',
+    name: 'Ren Daro',
+    number: '7',
   ),
   ListOfImage(
-    ImgUrl: 'assets/img/player-ro.jpg',
+      imgUrl: 'assets/img/player-bunthean.jpg',
+      name: 'Bunthean Sorn',
+      number: '9'),
+  ListOfImage(
+    imgUrl: 'assets/img/player-jek.jpg',
+    name: 'jek',
+    number: '1',
   ),
   ListOfImage(
-    ImgUrl: 'assets/img/player-bunthean.jpg',
+    imgUrl: 'assets/img/player-tola.jpg',
+    name: 'Tola',
+    number: '4',
   ),
-  ListOfImage(ImgUrl: 'assets/img/player-jek.jpg'),
+  ListOfImage(
+    imgUrl: 'assets/img/player-lik.jpg',
+    name: 'LK LK',
+    number: '16',
+  ),
+  ListOfImage(
+    imgUrl: 'assets/img/player-net.jpg',
+    name: 'Chhiv',
+    number: '5',
+  ),
 ];

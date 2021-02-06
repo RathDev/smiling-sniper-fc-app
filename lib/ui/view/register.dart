@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smiling_sniper_fc_app/ui/sign_in_screen.dart';
+import 'file:///E:/workspace/smiling-sniper-fc-app/lib/ui/view/sign_in_screen.dart';
 import 'package:smiling_sniper_fc_app/widget/button/general_button.dart';
 
 class RegisterScreen extends StatefulWidget {
