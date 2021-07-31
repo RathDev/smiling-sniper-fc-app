@@ -1,14 +1,11 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:smiling_sniper_fc_app/model/images/list_of_image.dart';
+import 'package:smiling_sniper_fc_app/model/images/list_of_image_slide.dart';
 
 class MyCarouselWithDot<T> extends StatefulWidget {
-  // final List<T> images;
   final double height;
   final double aspectRatio;
-
   MyCarouselWithDot({
-    // this.images,
     this.height = 120,
     this.aspectRatio = 16 / 9,
   });
@@ -26,10 +23,9 @@ class _MyCarouselWithDotState extends State<MyCarouselWithDot> {
     return Stack(
       children: [
         CarouselSlider.builder(
-          itemCount: ListOfImageData.length,
+          itemCount: listOfImageSlideData.length,
           options: CarouselOptions(
             height: widget.height,
-           // aspectRatio: widget.aspectRatio,
             viewportFraction: 1,
             enlargeCenterPage: true,
             autoPlay: true,
@@ -40,7 +36,7 @@ class _MyCarouselWithDotState extends State<MyCarouselWithDot> {
             },
           ),
           itemBuilder: (context, index) {
-            ListOfImage item = ListOfImageData[index];
+            ListOfImageSlide item = listOfImageSlideData[index];
 
             return ClipRRect(
               borderRadius: BorderRadius.circular(4),
@@ -57,8 +53,8 @@ class _MyCarouselWithDotState extends State<MyCarouselWithDot> {
           right: 12,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: ListOfImageData.map((img) {
-              int index = ListOfImageData.indexOf(img);
+            children: listOfImageSlideData.map((img) {
+              int index = listOfImageSlideData.indexOf(img);
 
               return Container(
                 width: 6.0,

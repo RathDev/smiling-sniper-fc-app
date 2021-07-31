@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 class GeneralButton extends StatelessWidget {
-  String title;
-  double height,width,circular;
-  GestureTapCallback onTap;
-  Color color,textColor;
+  final String title;
+  final double height,width,circular;
+  final GestureTapCallback onTap;
+  final Color color,textColor;
 
 
   GeneralButton(

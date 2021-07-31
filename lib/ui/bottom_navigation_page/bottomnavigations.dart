@@ -1,15 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:smiling_sniper_fc_app/config/app_color.dart';
 import 'file:///E:/workspace/smiling-sniper-fc-app/lib/ui/home_screen.dart';
 import 'package:smiling_sniper_fc_app/ui/bottom_navigation_page/profile_view.dart';
 
-class Bottomnavigations extends StatefulWidget {
+class BottomNavigation extends StatefulWidget {
   @override
-  _BottomnavigationsState createState() => _BottomnavigationsState();
+  _BottomNavigationState createState() => _BottomNavigationState();
 }
 
-class _BottomnavigationsState extends State<Bottomnavigations> {
+class _BottomNavigationState extends State<BottomNavigation> {
   int _currentIndex = 0;
   final List<Widget> _children = [
     HomeScreen(),
@@ -33,10 +32,10 @@ class _BottomnavigationsState extends State<Bottomnavigations> {
         items: [
           BottomNavigationBarItem(
             icon: new Icon(Icons.home),
-            title: new Text('Home'),
+            label: 'Home',
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.person), title: Text('Profile'))
+              icon: Icon(Icons.person), label:'Profile'),
         ],
       ),
     );
